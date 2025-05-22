@@ -845,6 +845,10 @@ input, select, textarea {
 }
 
 .fancybox__content {
-  max-height: 80vh !important;        /* Controls how tall it can get */
-  overflow-y: auto !important;        /* Add a scrollbar if content is too tall */
+max-height: 80vh !important;        /* Controls how tall it can get */
+overflow-y: auto !important;        /* Add a scrollbar if content is too tall */
+min-width: 320px;        /* Set your preferred minimum */
+max-width: 90vw;         /* Set your preferred maximum */
+width: auto;             /* Or a fixed width like 600px if you want */
+margin: 0 auto !important; /* Center horizontally */
 }
