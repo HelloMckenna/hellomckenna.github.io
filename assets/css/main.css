@@ -839,3 +839,17 @@ input, select, textarea {
   max-height: 75vh !important; /* 75% of the viewport height */
   overflow-y: auto !important; /* Adds a scrollbar if needed */
 }
+
+/* making the window anchored but taller */
+
+.fancybox__container {
+  display: flex !important;
+  align-items: flex-end !important;   /* Anchor modal to the bottom of the viewport */
+  justify-content: center !important; /* Center horizontally */
+  min-height: 100vh !important;       /* Make sure it fills the viewport */
+}
+
+.fancybox__content {
+  max-height: 80vh !important;        /* Controls how tall it can get */
+  overflow-y: auto !important;        /* Add a scrollbar if content is too tall */
+}
