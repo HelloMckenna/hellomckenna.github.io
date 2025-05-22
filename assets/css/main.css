@@ -834,3 +834,8 @@ input, select, textarea {
 		body .fancybox__container .fancybox__content {
 				  padding: 10px !important; /* Or your preferred padding */
 				}
+
+.fancybox__content {
+  max-height: 80vh !important; /* 80% of the viewport height */
+  overflow-y: auto !important; /* Adds a scrollbar if needed */
+}
