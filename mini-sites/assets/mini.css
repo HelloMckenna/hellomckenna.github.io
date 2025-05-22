@@ -1,0 +1,10 @@
+/* mini-site.css */
+:root {
+  --main-color: #2b6cb0;
+  --secondary-color: #f6e05e;
+  /* ...other variables */
+}
+body {
+  background: var(--main-color);
+  color: var(--secondary-color);
+}
