@@ -829,6 +829,7 @@ input, select, textarea {
 				.poptrox-popup .nav-previous {
 					display: none !important;
 				}
+		}
 /* fancybox padding */
 		body .fancybox__container .fancybox__content {
 				  padding: 10px !important; /* Or your preferred padding */
