@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
+:root {
+  --main-color: #150C07;
+  --secondary-color: rgba(255, 255, 255, 0.6);
+  --accent: #d64760;
+  --heading-color: #fff;
+  --heading-font: 'Source Sans Pro', Arial, sans-serif;
+  --text-font: 'Source Sans Pro', Arial, sans-serif;
+  --card-bg: rgba(34, 34, 34, 0.96);
+  --card-shadow: 0 12px 48px 0 rgba(31,38,135,0.28);
+  --card-radius: 24px;
+}
+
+body {
+  background: linear-gradient(120deg, #232526 0%, #150C07 100%);
+  min-height: 100vh;
+  font-family: var(--text-font);
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.hero {
+  background: linear-gradient(rgba(214,71,96,0.7),rgba(21,12,7,0.7)), url('../assets/banner.jpg') center/cover no-repeat;
+  padding: 3.5em 0 2em 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.7em;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.28);
+}
+.hero .subtitle {
+  font-size: 1.25em;
+  color: #ffe0e0;
+  margin: 1em 0 0 0;
+}
+
+.container {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  max-width: 700px;
+  margin: -3em auto 2em auto;
+  padding: 2em 2.5em;
+  position: relative;
+  z-index: 2;
+}
+
+.video-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+}
+.video-row iframe {
+  width: 320px;
+  height: 180px;
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 8px 24px 0 rgba(21,12,7,0.18);
+  background: #000;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.video-row iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px 0 var(--accent);
+}
+
+@media (max-width: 800px) {
+  .container { padding: 1.2em 0.7em; }
+  .video-row iframe { max-width: 95vw; }
+}
