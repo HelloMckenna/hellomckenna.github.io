@@ -11,6 +11,8 @@
   --text-font: 'Segoe UI', 'Roboto', Arial, sans-serif;
 }
 
+/* ...all your other styles, including .container, .video-row, etc... */
+
 body {
   font-family: var(--text-font);
   background: var(--bg-gradient, var(--main-color));
