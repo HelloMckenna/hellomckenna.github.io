@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
+:root {
+  --main-color: #150C07;
+  --accent: #d64760;
+  --heading-font: 'Source Sans Pro', Arial, sans-serif;
+  --text-font: 'Source Sans Pro', Arial, sans-serif;
+}
+body {
+  margin: 0; min-height: 100vh; font-family: var(--text-font); background: var(--main-color);
+  display: flex; align-items: stretch; min-height: 100vh;
+}
+.split-left {
+  flex: 1.1;
+  background: linear-gradient(160deg, #d64760 0%, #150C07 100%);
+  color: #fff;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 0 2em;
+}
+.split-left h1 {
+  font-family: var(--heading-font);
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4em;
+}
+.left-subtitle {
+  font-size: 1.2em;
+  color: #ffe066;
+  margin: 0.7em 0 0 0;
+  text-align: center;
+}
+.split-right {
+  flex: 2.2;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(34,34,34,0.98);
+}
+.content-card {
+  background: #1b1a1f;
+  color: #e4e4e4;
+  border-radius: 20px;
+  box-shadow: 0 8px 38px 0 #0008;
+  padding: 2.6em 2em;
+  max-width: 540px;
+  margin: 2em;
+}
+.video-row {
+  display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 2em;
+}
+.video-row iframe {
+  width: 278px; height: 160px; border-radius: 12px; border: none;
+  box-shadow: 0 4px 16px #0006;
+  background: #000;
+}
+@media (max-width: 900px) {
+  body { flex-direction: column; }
+  .split-left { min-height: 200px; padding: 2em 1em; }
+  .split-right { justify-content: flex-start; }
+  .content-card { margin: 1em auto; }
+}
