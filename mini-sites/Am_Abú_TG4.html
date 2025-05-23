@@ -4,40 +4,132 @@
   <meta charset="UTF-8">
   <title>Am Abú TG4</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: sans-serif; background: #222; color: #fff; margin: 0; }
-    .container { padding: 2em 1em; max-width: 500px; margin: 0 auto; }
-    h2 { margin-top: 0; }
-    img { width: 100%; border-radius: 0.5em; margin-bottom: 1em; }
-    .video { position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; }
-    .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-  </style>
   <link rel="stylesheet" href="assets/mini.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #243B55 0%, #141E30 100%);
+      color: #f4f4f4;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .container {
+      background: rgba(34, 34, 34, 0.93);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      border-radius: 20px;
+      padding: 2.5em 2em 2em 2em;
+      max-width: 700px;
+      margin: 3em auto 2em auto;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 2.3em;
+      letter-spacing: 1px;
+      color: #f6e05e;
+      text-shadow: 1px 2px 8px #0003;
+      text-align: center;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #b0c4de;
+      margin-bottom: 2em;
+    }
+    .video-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+    }
+    .video-row iframe {
+      width: 320px;
+      height: 180px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
+      background: #000;
+      transition: transform 0.2s;
+    }
+    .video-row iframe:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 24px 0 rgba(246, 224, 94, 0.22);
+    }
+    p {
+      line-height: 1.7;
+      font-size: 1.08em;
+      margin: 1.2em 0;
+    }
+    ul {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 1.2em 1.6em;
+      margin: 1.5em 0;
+      box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+    }
+    ul li {
+      margin: 0.7em 0;
+      font-size: 1.05em;
+    }
+    a {
+      color: #f6e05e;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 1px dashed #f6e05e80;
+      transition: color 0.2s, border-bottom 0.2s;
+    }
+    a:hover {
+      color: #ffe066;
+      border-bottom: 1px solid #ffe066;
+    }
+    @media (max-width: 720px) {
+      .container {
+        padding: 1em 0.5em;
+        max-width: 97vw;
+      }
+      .video-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .video-row iframe {
+        width: 95vw;
+        max-width: 360px;
+        height: 200px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="video-row">
-  <iframe
-    src="https://www.youtube.com/embed/08bQw6m05LI?autoplay=1&mute=1&loop=1&playlist=08bQw6m05LI&rel=0&controls=0"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
-    title="Behind the Scenes">
-  </iframe>
-  <iframe
-    src="https://www.youtube.com/embed/ZMaYBhhjWkY?autoplay=1&mute=1&loop=1&playlist=ZMaYBhhjWkY&rel=0&controls=0"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
-    title="Showcase">
-  </iframe>
-</div>
-    <p>More text about the project, such as what you built, technologies used, or interesting challenges.</p>
+  <div class="container">
+    <h2>Am Abú TG4</h2>
+    <p class="subtitle">Ireland’s First Virtual Production TV Show</p>
+    <div class="video-row">
+      <iframe
+        src="https://www.youtube.com/embed/08bQw6m05LI?autoplay=1&mute=1&loop=1&playlist=08bQw6m05LI&rel=0&controls=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Behind the Scenes"></iframe>
+      <iframe
+        src="https://www.youtube.com/embed/ZMaYBhhjWkY?autoplay=1&mute=1&loop=1&playlist=ZMaYBhhjWkY&rel=0&controls=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Showcase"></iframe>
+    </div>
+    <p>
+      On-set Unreal Engine virtual environment artist on <strong>Am Abú</strong>, Ireland’s first virtual production TV show.<br>
+      Produced by Wonderpics and funded by TG4. The project combined cutting-edge technology and creative storytelling to break new ground in Irish television.
+    </p>
     <ul>
-      <li>Key Feature 1</li>
-      <li>Key Feature 2</li>
-      <li>Key Feature 3</li>
+      <li>Designed and built immersive virtual sets in Unreal Engine.</li>
+      <li>Collaborated with directors and technical crew for real-time production.</li>
+      <li>Overcame unique lighting and camera tracking challenges.</li>
     </ul>
-    <p><a href="https://github.com/HelloMckenna/your-project">View on GitHub</a></p>
+    <p>
+      <a href="https://github.com/HelloMckenna/your-project" target="_blank" rel="noopener">View on GitHub</a>
+    </p>
   </div>
 </body>
 </html>
