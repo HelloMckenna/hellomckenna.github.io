@@ -1,6 +1,153 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
 
-/* ...existing CSS... */
+/* mini-site.css - matched and merged with main.css */
+
+/* Root Variables */
+:root {
+  --main-color: #150C07;
+  --secondary-color: rgba(255, 255, 255, 0.6);
+  --accent: #d64760;
+  --heading-color: #fff;
+  --heading-font: 'Source Sans Pro', Arial, sans-serif;
+  --text-font: 'Source Sans Pro', Arial, sans-serif;
+  --card-bg: rgba(34, 34, 34, 0.93);
+  --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --card-radius: 20px;
+  --link-color: rgba(255,255,255,0.85);
+  --link-hover: #d64760;
+  --strong-color: rgba(255,255,255,0.85);
+}
+
+/* Reset & Box Sizing */
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* Base Typography and Layout */
+body {
+  font-family: var(--text-font);
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  margin: 0;
+  min-height: 100vh;
+  font-size: 13pt;
+  line-height: 1.75em;
+  -webkit-text-size-adjust: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+@media (max-width: 1680px) {
+  body { font-size: 11pt; }
+}
+@media (max-width: 1280px) {
+  body { font-size: 10pt; }
+}
+@media (max-width: 980px) {
+  body { font-size: 11pt; }
+}
+
+input, select, textarea {
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  margin: 1em 0 0.5em 0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 2.3em;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 8px #0003;
+  text-align: center;
+  color: var(--heading-color);
+}
+
+/* Utility Typography */
+strong, b {
+  color: var(--strong-color);
+  font-weight: 600;
+}
 
 .subtitle {
   text-align: center;
@@ -9,39 +156,10 @@
   margin-bottom: 2em;
 }
 
-.video-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 2em;
-  flex-wrap: wrap;
-}
-.video-row iframe {
-  width: 320px;
-  height: 180px;
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
-  background: #000;
-  transition: transform 0.2s;
-}
-.video-row iframe:hover {
-  transform: scale(1.04);
-  box-shadow: 0 6px 24px 0 rgba(246, 224, 94, 0.22);
+p {
+  line-height: 1.7;
+  font-size: 1.08em;
+  margin: 1.2em 0;
 }
 
-@media (max-width: 720px) {
-  .container {
-    padding: 1em 0.5em;
-    max-width: 97vw;
-  }
-  .video-row {
-    flex-direction: column;
-    align-items: center;
-  }
-  .video-row iframe {
-    width: 95vw;
-    max-width: 360px;
-    height: 200px;
-  }
-}
+/* Container/Card
