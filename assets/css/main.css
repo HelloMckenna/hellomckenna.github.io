@@ -837,3 +837,17 @@ input, select, textarea {
 .fancybox__container {
   z-index: 99999 !important;
 }
+
+.tile-thumb {
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: darken on hover */
+.tile-thumb:hover {
+  opacity: 0.8;
+}
