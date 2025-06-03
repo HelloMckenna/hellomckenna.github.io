@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Am Abú TG4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/mini.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Am Abú TG4</h2>
+    <p class="subtitle">Ireland’s First Virtual Production TV Show</p>
+    <div class="video-row">
+      <iframe
+        src="https://www.youtube.com/embed/08bQw6m05LI?autoplay=1&mute=1&loop=1&playlist=08bQw6m05LI&rel=0&controls=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Behind the Scenes"></iframe>
+      <iframe
+        src="https://www.youtube.com/embed/ZMaYBhhjWkY?autoplay=1&mute=1&loop=1&playlist=ZMaYBhhjWkY&rel=0&controls=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Showcase"></iframe>
+    </div>
+    <p>
+      On-set Unreal Engine virtual environment artist on <strong>Am Abú</strong>, Ireland’s first virtual production TV show.<br>
+      Produced by Wonderpics and funded by TG4. The project combined cutting-edge technology and creative storytelling to break new ground in Irish television.
+    </p>
+    <ul>
+      <li>Designed and built immersive virtual sets in Unreal Engine.</li>
+      <li>Collaborated with directors and technical crew for real-time production.</li>
+      <li>Overcame unique lighting and camera tracking challenges.</li>
+    </ul>
+    <p>
+      <a href="https://github.com/HelloMckenna/your-project" target="_blank" rel="noopener">View on GitHub</a>
+    </p>
+  </div>
+</body>
+</html>
