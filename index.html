@@ -1,190 +1,119 @@
-<!DOCTYPE HTML>
-<!--
-	Parallelism by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Ryan McKenna</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="assets/js/thumb-hover.js"></script>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Am Abú TG4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/mini.css">
+  <style>
+    .container {
+      max-width: 650px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 2.5rem 2rem 2rem 2rem;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    .header-section {
+      border-bottom: 2px solid #e0e0e0;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      text-align: center;
+    }
 
-				<!-- Main -->
-					<section id="main">
+    .subtitle {
+      font-size: 1.15rem;
+      color: #7a7a7a;
+      margin-top: 0.4em;
+      margin-bottom: 0.7em;
+    }
 
-						<!-- Items -->
-							<div class="items">
+    .video-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 1.5rem 0;
+    }
 
-								<div class="item intro span-2">
-									<h1>Ryan McKenna</h1>
-									<p>Creative Technologist<br />
-								</p>
-								</div>
+    .video-row iframe {
+      flex: 1 1 300px;
+      min-width: 240px;
+      max-width: 340px;
+      aspect-ratio: 16 / 9;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.11);
+      border: 1px solid #e0e0e0;
+      background: #fafafa;
+    }
 
+    ul {
+      margin: 1.2rem 0 1.7rem 1.2rem;
+      padding-left: 1.2em;
+    }
 
-								<article class="item thumb span-2">
-								  <h2>Immersive Futures Workshop Series 2025</h2>
-								  <a data-fancybox data-type="iframe" data-src="mini-sites/ImmersiveFutures2025.html" href="javascript:;">
-								    <img
-								      src="images/thumbs/ImmersiveFutures_Thumb1.jpeg"
-								      data-thumb="images/thumbs/ImmersiveFutures_Thumb1.jpeg"
-								      data-thumb-alt="images/thumbs/ImmersiveFutures_Thumb2.jpeg"
-								      class="hover-thumb"
-								      alt="Immersive Futures Workshop Series 2025"
-								    >
-								  </a>
-								</article>
-								
-								<article class="item thumb span-2">
-								  <h2>Am Abú TV Show for TG4 - Virtual Produciton</h2>
-								  <a data-fancybox data-type="iframe" data-src="mini-sites/Am_Abú_TG4.html" href="javascript:;">
-								    <img
-								      src="images/thumbs/Am_Abu1.png"
-								      data-thumb="images/thumbs/Am_Abu1.png"
-								      data-thumb-alt="images/thumbs/Am_Abu2.png"
-								      class="hover-thumb"
-								      alt="Am Abú TV Show for TG4"
-								    >
-								  </a>
-								</article>
-								
-								<article class="item thumb span-1">
-								  <h2>Touch Designer Development</h2>
-								  <a data-fancybox data-type="iframe" data-src="mini-sites/Am_Abú_TG4.html" href="javascript:;">
-								    <img
-								      src="images/thumbs/Am_Abu1.png"
-								      data-thumb="images/thumbs/Am_Abu1.png"
-								      data-thumb-alt="images/thumbs/Am_Abu2.png"
-								      class="hover-thumb"
-								      alt="Touch Designer Projects"
-								    >
-								  </a>
-								</article>
-								<article class="item thumb span-1">
-									<h2>Bash Brothers - Performance Artist</h2>
-									<a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;">
-										<img 
-									src="images/thumbs/Bash_Thumb1.png"
-								      data-thumb="images/thumbs/Bash_Thumb1.png"
-								      data-thumb-alt="images/thumbs/Bash_Thumb2.png"
-								      class="hover-thumb"
-								      alt="Bash Brothers - Performance Artist"
-								    >
-								  </a>
-								</article>
+    li {
+      margin-bottom: 0.65em;
+    }
 
-								<article class="item thumb span-1">
-									<h2>Ardán & CUEONE - Virtual Production</h2>
-									<a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;">
-										<img 
-								      data-thumb="images/thumbs/CUEONEthumb5.png"
-								      data-thumb-alt="images/thumbs/CUEONEthumb6.png"
-								      class="hover-thumb"
-								      alt="Technical Assistant on artist residency"
-								    >
-								  </a>
-								</article>
+    .github-link {
+      display: inline-block;
+      color: #fff !important;
+      background: #222;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      transition: background 0.18s;
+    }
+    .github-link:hover {
+      background: #444;
+    }
 
-								<article class="item thumb span-2">
-									<h2>Electric Picnic Performace Artist</h2>
-									<a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;">
-										<img 
-								      data-thumb="images/thumbs/ElectricPicnic1.jpg"
-								      data-thumb-alt="images/thumbs/ElectricPicnic1.jpg"
-								      class="hover-thumb"
-								      alt="Electric Picnic - Performance Artist"
-								    >
-								  </a>
-								</article>
-
-								<article class="item thumb span-1">
-									<h2>Ardán & University Galway - Virtual Production</h2>
-									<a href="images/fulls/05.jpg" class="image">
-										<img 
-								      data-thumb="images/thumbs/VirtualProductionUniGalway1.jpg"
-								      data-thumb-alt="images/thumbs/VirtualProductionUniGalway2.jpg"
-								      class="hover-thumb"
-								      alt="Virtual Production Support"
-								    >
-								  </a>
-								</article>
-
-								<article class="item thumb span-1">
-									<h2>Independant Music Tour of West Ireland</h2>
-									<a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/06.jpg" alt=""></a>
-								</article>
-
-								<article class="item thumb span-2">
-									<h2>IADT Virtul Production Lecturer Training CourseC</h2>
-									<a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/07.jpg" alt=""></a>
-								</article>
-
-								<article class="item thumb span-2">
-									<h2>ITX Computer Build</h2>
-									<a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/08.jpg" alt=""></a>
-								</article>
-
-								
-							</div>
-
-						<!-- Items -->
-							<div class="items">
-
-								<article class="item thumb span-3"><h2>Immersive Futures Workshpp Series 2024</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/05.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><h2>Cybernate Artist Residency</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/06.jpg" alt=""></a></article>
-								<article class="item thumb span-2"><h2>Virtual Production University of Ulster Belfast dec 2023</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/07.jpg" alt=""></a></article>
-								<article class="item thumb span-2"><h2>Co-founded Galway Céilí Club</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/08.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><h2> Advisor to IADT BA (Hons) Immersive Media Production Course jun 2023</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/04.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><h2>QWERTY - Mo-Sys april 2023</h2><a data-fancybox data-type="iframe" data-src="mini-sites/Am_Abú_TG4.html" href="javascript:;"><img src="images/thumbs/01.jpg" alt=""></a></article>
-								<article class="item thumb span-2"><h2>Speaker @ Waterford tech meetup March 14 2023</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/02.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><h2>Grant Application for Immersive Research Centre Feb 2023 </h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/03.jpg" alt=""></a></article>
-								<article class="item thumb span-2"><h2>KinoD Jan 2023</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/05.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><h2>Fibin Drummer dec 2022</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/04.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><h2>Fibin Drummer dec 2022</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/04.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><h2>Fibin Drummer dec 2022</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/04.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><h2>Fibin Drummer dec 2022</h2><a data-fancybox data-type="iframe" data-src="mini-project1.html" href="javascript:;"><img src="images/thumbs/04.jpg" alt=""></a></article>
-							</div>
-
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<section>
-
-						</section>
-						<section>
-							<ul class="icons">
-								
-								<li><a href="https://www.instagram.com/hello.mckenna/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="mailto:hello.mckenna@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Ryan McKenna</li>
-							</ul>
-						</section>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-			<script src="assets/js/thumb-hover.js"></script>
-
-	</body>
+    @media (max-width: 700px) {
+      .container {
+        padding: 1.3rem 0.5rem;
+      }
+      .video-row {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-section">
+      <h2>Am Abú TG4</h2>
+      <p class="subtitle">Ireland’s First Virtual Production TV Show</p>
+    </div>
+    <div class="video-row">
+      <iframe
+        src="https://www.youtube.com/embed/08bQw6m05LI?autoplay=1&mute=1&loop=1&playlist=08bQw6m05LI&rel=0&controls=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Behind the Scenes"></iframe>
+      <iframe
+        src="https://www.youtube.com/embed/ZMaYBhhjWkY?autoplay=1&mute=1&loop=1&playlist=ZMaYBhhjWkY&rel=0&controls=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Showcase"></iframe>
+    </div>
+    <p>
+      On-set Unreal Engine virtual environment artist on <strong>Am Abú</strong>, Ireland’s first virtual production TV show.<br>
+      Produced by Wonderpics and funded by TG4. The project combined cutting-edge technology and creative storytelling to break new ground in Irish television.
+    </p>
+    <ul>
+      <li>Designed and built immersive virtual sets in Unreal Engine.</li>
+      <li>Collaborated with directors and technical crew for real-time production.</li>
+      <li>Overcame unique lighting and camera tracking challenges.</li>
+    </ul>
+    <p>
+    </p>
+  </div>
+</body>
 </html>
