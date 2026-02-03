@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan McKenna - CV</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+      padding: 2rem 1rem;
+    }
+
+    .cv-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .cv-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 3rem 2.5rem;
+      text-align: center;
+    }
+
+    .cv-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .cv-header .title {
+      font-size: 1.3rem;
+      font-weight: 300;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    .contact-info a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .cv-content {
+      padding: 2.5rem;
+    }
+
+    .cv-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .cv-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #667eea;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .cv-section h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.3rem;
+    }
+
+    .cv-section h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-item,
+    .education-item {
+      margin-bottom: 2rem;
+    }
+
+    .experience-item:last-child,
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .company {
+      font-weight: 500;
+      color: #6b7280;
+    }
+
+    .date {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .cv-section ul {
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .cv-section li {
+      margin-bottom: 0.5rem;
+      color: #4b5563;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category h4 {
+      color: #667eea;
+      margin-bottom: 0.7rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: #f3f4f6;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+    }
+
+    .print-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      padding: 0.8rem 2rem;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .print-button:hover {
+      background: #5568d3;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      
+      .cv-container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .print-button,
+      .back-link {
+        display: none;
+      }
+
+      .cv-header {
+        background: #667eea;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0;
+      }
+
+      .cv-container {
+        border-radius: 0;
+      }
+
+      .cv-header {
+        padding: 2rem 1.5rem;
+      }
+
+      .cv-header h1 {
+        font-size: 2rem;
+      }
+
+      .cv-content {
+        padding: 1.5rem;
+      }
+
+      .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <header class="cv-header">
+      <h1>Ryan McKenna</h1>
+      <div class="title">Creative Technologist</div>
+      <div class="contact-info">
+        <a href="mailto:hello.mckenna@gmail.com">hello.mckenna@gmail.com</a>
+        <a href="https://www.instagram.com/hello.mckenna/" target="_blank" rel="noopener noreferrer">@hello.mckenna</a>
+        <a href="https://hellomckenna.github.io" target="_blank" rel="noopener noreferrer">hellomckenna.github.io</a>
+      </div>
+    </header>
+
+    <div class="cv-content">
+      <section class="cv-section">
+        <h2>Professional Summary</h2>
+        <p>
+          Creative Technologist specializing in virtual production, immersive media, and real-time 3D environments. 
+          Experienced in Unreal Engine development, virtual production workflows, and technical direction for innovative 
+          media projects. Passionate about pushing the boundaries of storytelling through emerging technologies.
+        </p>
+      </section>
+
+      <section class="cv-section">
+        <h2>Professional Experience</h2>
+        
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <h3>Virtual Environment Artist</h3>
+              <div class="company">Wonderpics / TG4 - Am Abú</div>
+            </div>
+            <div class="date">2024</div>
+          </div>
+          <ul>
+            <li>On-set Unreal Engine virtual environment artist for Ireland's first virtual production TV show</li>
+            <li>Designed and built immersive virtual sets in Unreal Engine for real-time broadcast</li>
+            <li>Collaborated with directors and technical crew for seamless real-time production workflows</li>
+            <li>Overcame unique lighting and camera tracking challenges in live production environment</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <h3>Workshop Facilitator</h3>
+              <div class="company">Immersive Futures Workshop Series</div>
+            </div>
+            <div class="date">2024-2025</div>
+          </div>
+          <ul>
+            <li>Led workshops on immersive technologies and virtual production techniques</li>
+            <li>Trained participants in cutting-edge creative technology workflows</li>
+            <li>Designed curriculum covering real-time engines, XR, and interactive media</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <h3>Virtual Production Technical Assistant</h3>
+              <div class="company">Ardán & CUEONE Artist Residency</div>
+            </div>
+            <div class="date">2023-2024</div>
+          </div>
+          <ul>
+            <li>Provided technical support for virtual production artist residency programs</li>
+            <li>Assisted artists in implementing virtual production workflows</li>
+            <li>Maintained and optimized virtual production equipment and software systems</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <h3>Virtual Production Support</h3>
+              <div class="company">University of Galway & University of Ulster Belfast</div>
+            </div>
+            <div class="date">2023</div>
+          </div>
+          <ul>
+            <li>Provided virtual production technical support for academic institutions</li>
+            <li>Assisted in research and development of virtual production methodologies</li>
+            <li>Facilitated hands-on training for students and faculty</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <h3>Performance Artist & Creative Technologist</h3>
+              <div class="company">Various Projects</div>
+            </div>
+            <div class="date">2022-Present</div>
+          </div>
+          <ul>
+            <li>Bash Brothers - Performance artist integrating technology and live performance</li>
+            <li>Electric Picnic - Performance artist at major music festival</li>
+            <li>Independent Music Tour - Technical direction for west Ireland tour</li>
+            <li>Fibin - Drummer and technical consultant</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Education & Training</h2>
+        
+        <div class="education-item">
+          <div class="job-header">
+            <div>
+              <h3>Lecturer Training Course</h3>
+              <div class="company">IADT Virtual Production</div>
+            </div>
+            <div class="date">2024</div>
+          </div>
+          <p>Completed professional development course for virtual production instruction</p>
+        </div>
+
+        <div class="education-item">
+          <div class="job-header">
+            <div>
+              <h3>Program Advisor</h3>
+              <div class="company">IADT BA (Hons) Immersive Media Production</div>
+            </div>
+            <div class="date">2023</div>
+          </div>
+          <p>Advisory role for curriculum development in immersive media education</p>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Real-Time Engines</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Unreal Engine</span>
+              <span class="skill-tag">TouchDesigner</span>
+              <span class="skill-tag">Real-time Rendering</span>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h4>Virtual Production</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Camera Tracking</span>
+              <span class="skill-tag">LED Volume</span>
+              <span class="skill-tag">Mo-Sys</span>
+              <span class="skill-tag">Live Compositing</span>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h4>Creative Technology</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">3D Environments</span>
+              <span class="skill-tag">Lighting Design</span>
+              <span class="skill-tag">XR Development</span>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h4>Technical Production</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Live Broadcasting</span>
+              <span class="skill-tag">On-set Workflows</span>
+              <span class="skill-tag">System Integration</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Community & Leadership</h2>
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <h3>Co-founder</h3>
+              <div class="company">Galway Céilí Club</div>
+            </div>
+            <div class="date">2023</div>
+          </div>
+          <p>Co-founded community organization promoting Irish traditional music and culture</p>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <h3>Speaker</h3>
+              <div class="company">Waterford Tech Meetup</div>
+            </div>
+            <div class="date">March 2023</div>
+          </div>
+          <p>Presented on virtual production and immersive technologies to tech community</p>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <h3>Grant Application Contributor</h3>
+              <div class="company">Immersive Research Centre</div>
+            </div>
+            <div class="date">February 2023</div>
+          </div>
+          <p>Contributed to grant application for establishing immersive research facility</p>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Notable Projects</h2>
+        <ul>
+          <li><strong>Am Abú (TG4):</strong> Ireland's first virtual production TV show - Virtual environment artist</li>
+          <li><strong>QWERTY (Mo-Sys):</strong> Technical consultant for Mo-Sys virtual production system (April 2023)</li>
+          <li><strong>KinoD:</strong> Technical role in immersive cinema project (January 2023)</li>
+          <li><strong>Cybernate Artist Residency:</strong> Technical support for experimental media artists</li>
+          <li><strong>ITX Computer Build:</strong> Custom high-performance system for creative production workflows</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <button class="print-button" onclick="window.print()" aria-label="Download or print this CV as a PDF">Download / Print CV</button>
+  <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+  <script>
+    // Add keyboard accessibility for print button
+    document.querySelector('.print-button').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.print();
+      }
+    });
+  </script>
+
+</body>
+</html>
