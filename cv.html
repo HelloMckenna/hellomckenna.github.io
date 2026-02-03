@@ -267,8 +267,8 @@
       <div class="title">Creative Technologist</div>
       <div class="contact-info">
         <a href="mailto:hello.mckenna@gmail.com">hello.mckenna@gmail.com</a>
-        <a href="https://www.instagram.com/hello.mckenna/" target="_blank">@hello.mckenna</a>
-        <a href="https://hellomckenna.github.io" target="_blank">hellomckenna.github.io</a>
+        <a href="https://www.instagram.com/hello.mckenna/" target="_blank" rel="noopener noreferrer">@hello.mckenna</a>
+        <a href="https://hellomckenna.github.io" target="_blank" rel="noopener noreferrer">hellomckenna.github.io</a>
       </div>
     </header>
 
@@ -480,8 +480,18 @@
     </div>
   </div>
 
-  <button class="print-button" onclick="window.print()">Download / Print CV</button>
+  <button class="print-button" onclick="window.print()" aria-label="Download or print this CV as a PDF">Download / Print CV</button>
   <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+  <script>
+    // Add keyboard accessibility for print button
+    document.querySelector('.print-button').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.print();
+      }
+    });
+  </script>
 
 </body>
 </html>
